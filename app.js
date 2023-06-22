@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
+require('dotenv').config()
+
 
 const app = express();
 
@@ -10,7 +12,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://Mostafa:babafeen@cluster0.ff2x1.gcp.mongodb.net/todolistDB", {useNewUrlParser: true});
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true })
+.then(console.log("DB Connected!"))
 
 const itemsSchema =({
   name: String
