@@ -2,6 +2,9 @@
 
 ## A simple Todo list app where you can create a new list using URL, adding items to a list, and deleting items from a list
 
+## Technologies
+**HTML, CSS, Node.js (Express.js), MongoDB (Mongoose), path, EJS**
+
 **Main Page:**
 ![Main Page](https://github.com/MostafaAlaa297/Todo-List/blob/master/Screenshot/Main.png?raw=true)
 
